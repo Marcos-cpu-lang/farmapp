@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crop Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Crop Management</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="crop_management.html">Crop Management</a></li>
+            <li><a href="weather_updates.html">Weather Updates</a></li>
+            <li><a href="soil_monitoring.html">Soil Monitoring</a></li>
+            <li><a href="market.html">Market Prices</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h2>Crop Management Recommendations</h2>
+        <label for="crop-type">Enter Crop Name:</label>
+        <input type="text" id="crop-type" placeholder="e.g., maize, wheat, rice">
+        <button onclick="getCropRecommendation()">Get Recommendation</button>
+        <div id="crop-result"></div>
+    </main>
+
+    <footer>
+        <p>WELCOME TO OUR SITE.</p>
+    </footer>
+
+    <script>
+        function getCropRecommendation() {
+            const cropName = document.getElementById("crop-type").value.toLowerCase();
+            const cropResult = document.getElementById("crop-result");
+
+            let recommendations = {
+                maize: "Use nitrogen-rich fertilizers. Water regularly during germination.",
+                rice: "Maintain a flooded field. Use organic compost for best results.",
+                wheat: "Plant in cool seasons. Apply phosphorus-based fertilizers."
+            };
+
+            if (cropName in recommendations) {
+                cropResult.innerHTML = `<p>Recommendation for <strong>${cropName}</strong>: ${recommendations[cropName]}</p>`;
+            } else {
+                cropResult.innerHTML = "<p>Sorry, no recommendation available for this crop.</p>";
+            }
+        }
+    </script>
+</body>
+</html>

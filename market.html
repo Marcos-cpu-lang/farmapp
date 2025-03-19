@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Market Prices & Suppliers</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="market.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Market Prices & Suppliers</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="crop_management.html">Crop Management</a></li>
+            <li><a href="weather_updates.html">Weather Updates</a></li>
+            <li><a href="soil_monitoring.html">Soil Monitoring</a></li>
+            <li><a href="market.html">Market Prices</a></li>
+            <li><a href="summary.html">Summary & Recommendations</a></li>
+            <li><a href="user_manual.html">User Manual</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Check Market Prices</h2>
+            <label for="crop-name">Enter Crop Name:</label>
+            <input type="text" id="crop-name" placeholder="e.g., maize, rice, wheat">
+            <button onclick="getMarketPrice()">Get Price</button>
+            <div id="price-result"></div>
+        </section>
+
+        <section>
+            <h2>Find Suppliers</h2>
+            <p>Below is a list of trusted suppliers for seeds, fertilizers, and equipment:</p>
+            <ul>
+                <li><strong>Agro Supply Co.</strong> - Seeds & Fertilizers - <a href="#">Visit Site</a></li>
+                <li><strong>Farm Tools Ltd.</strong> - Farming Equipment - <a href="#">Visit Site</a></li>
+                <li><strong>Organic Growers</strong> - Organic Farming Supplies - <a href="#">Visit Site</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>WELCOME TO OUR SITE.</p>
+    </footer>
+</body>
+</html>

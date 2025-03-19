@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Updates</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="weather.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Weather Updates</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="crop_management.html">Crop Management</a></li>
+            <li><a href="weather_updates.html">Weather Updates</a></li>
+            <li><a href="soil_monitoring.html">Soil Monitoring</a></li>
+            <li><a href="market.html">Market Prices</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h2>Check Weather Updates</h2>
+        <label for="location">Enter Location:</label>
+        <input type="text" id="location" placeholder="e.g., Nairobi, Accra, Mumbai">
+        <button onclick="getWeather()">Get Weather</button>
+        <div id="weather-result"></div>
+    </main>
+
+    <footer>
+        <p>WELCOME TO OUR SITE.</p>
+    </footer>
+</body>
+</html>
